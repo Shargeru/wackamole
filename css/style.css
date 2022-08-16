@@ -1,0 +1,55 @@
+h1, h2  {
+    font-size: 60px;
+    text-align: center;
+    font-family: poppins;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.dirt {
+    width: 200px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.dirt::after {
+    content:"";
+    display: block;
+    width: 200px;
+    height: 60px;
+    background: url(../img/dirt.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    bottom: -1px;
+}
+
+.mole {
+    width: 100%;
+    height: 90%;
+    background: url(../img/mole.png) bottom center no-repeat;
+    background-size: 52%;
+    position: absolute;
+    top: 100px;
+    transition: top 0.3s;
+}
+
+.dirt.show .mole {
+    top: 0;
+}
